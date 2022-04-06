@@ -8,36 +8,50 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="login wrapper">
-        <form action="" class="form">
-            <img src="image/avartar.JPG" alt="">
-            <h2> login</h2>
-            <div class="input-group">
-                <input type="text" name="loginuser" id="loginuser" required>
-                <label for="loginuser">User Name</label>
-            </div>
-            <div class="input-group">
-                <input type="password" name="loginpassword" id="loginpassword" required>
-                <label for="loginpassword">password</label>
-            </div>
-            <input type="submit" value="login" class="submit-btn">
-            <a href="#forgot pw" class="forgot pw">Forgot password?</a>
-
-        </form>
-
-        <div id="forgot pw">
-            <form action="" class="form">
-                <a href="#" class="close">&times;</a>
-                <h2> Reset password</h2>
-                <div class="input-group">
-                    <input type="email" name="email" id="email" required>
-                    <label for="email">Email</label>
-                    <input type="submit" value="submit" class="submit-btn">
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>Log In </h2>
+                    <form>
+                        <input type="email" class="input-box", placeholder="Enter your email" required>
+                        <input type="password" class="input-box", placeholder="password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class=" btn" onclick="openRegister()">I am new here</button>
+                    <a href="">Forgot password</a>
                 </div>
-            </form>
-
+                <div class="card-back">
+                    <h2>Register</h2>
+                    <form>
+                        <input type="text" class="input-box", placeholder="Your Name" required>
+                        <input type="email" class="input-box", placeholder="Enter your email" required>
+                        <input type="password" class="input-box", placeholder="Password" required>
+                        <input type="password" class="input-box", placeholder="Confirm password" required>
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class=" btn" onclick="openLogin()">I have an account</button>
+                    <a href="">Forgot password</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        var card = document.getElementById("card");
+
+        function openRegister(){
+            card.style.transform = "rotatey(-180deg)";
+        }
+        function openLogin(){
+            card.style.transform = "rotatey(0deg)";
+        }
+
+
+
+    </script>
 
 </body>
 </html>

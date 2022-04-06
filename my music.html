@@ -5,38 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <title>My Music</title>
     <link rel="stylesheet" href="style.css">
     <script>src="app.js" </script>
-    <title>My Music</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <h1>Music player</h1>
-    <div class="music-container">
-        <div class="music-info">
-            <h4 id="title">Hapo tu</h4>
-            <div class="progress-container">
-                <div class="progress"></div>
+    <div class="wrapper">
+        <div class="top-bar">
+            <i class="material-icons">Expand more</i>
+            <span>Now Playing</span>
+            <i class="material-icons">more-horiz</i>
+        </div>
+        <div class="img-area">
+            <img src="#" alt="">
+        </div> 
+        <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar">
+            </div>
+            <div class="timer">
+                <span class="current">0:20</span>
+                <span class="current">3:40</span>
             </div>
         </div>
-        <audio src="music/Hapo tu.mp3" id="audio"></audio>
-        <div class="img-container">
-            <img src="" alt="music-cover" id="cover">
+        <div class="controls">
+            <i class="material-icons" id="repeat-plist">more_horiz</i>
+            <i class="material-icons" id="prev">skip_previous</i>
+            <div class="play-pause">
+                <i class="material-icons">play_arrow</i>
+            </div>
+            <i class="material-icons" id="next">skip_next</i>
+            <i class="material-icons" id="more-music">queue_music</i>
         </div>
-
-        <div class="navigation">
-            <button id="prev" class="action-btn">
-                <i class="fas fa-backward"></i>
-            </button>
-            <button id="play" class="action-btn action-btn-big">
-                <i class="fas fa-play"></i>
-            </button>
-            <button id="next" class="action-btn">
-                <i class="fas fa-forward"></i>
-            </button>
+        <div class="music-list">
+            <div class="header">
+                <div class="row">
+                    <i class="material-icons">queue_music</i> 
+                    <span>music list</span>
+                </div>
+                <i class="material-icons" id="close">close</i>
+            </div>
         </div>
+        <ul>
+            <li>
+                <div class="row"></div>
+            </li>
+        </ul>
     </div>
-    
-    
     
 </body>
 </html>
